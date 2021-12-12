@@ -2,16 +2,18 @@ package quintrix.Assignment;
 
 import org.junit.Test;
 
+import junit.framework.Assert;
+
 public class CarTests {
 
 	@Test
 	public void canBuildCar() {
 
 		Car myCar = new Car("corvette");
-		myCar.drive(25);
-		System.out.println(myCar.getOdometer());
+		int expectedOdometer = 7000;
+		int currentOdometer = myCar.getOdometer();
 		myCar.start();
-		myCar.engine.start();
+		Assert.assertEquals(expectedOdometer, currentOdometer);
 
 	}
 
