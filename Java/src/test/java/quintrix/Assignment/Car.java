@@ -18,10 +18,6 @@ public class Car {
 		return this.odometer;
 	}
 
-	public void drive(int distance) {
-
-	}
-
 	public void start() {
 
 		System.out.println("I have just started my car engine");
