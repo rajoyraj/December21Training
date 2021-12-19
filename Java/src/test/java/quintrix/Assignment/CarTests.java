@@ -17,4 +17,16 @@ public class CarTests {
 
 	}
 
+	@Test
+	public void canTrackMileage() {
+
+		Car myCar = new Car("Toyota");
+		int currentOdometer = myCar.getOdometer();
+
+		myCar.drive();
+
+		Assert.assertEquals(currentOdometer + 1, myCar.getOdometer());
+
+	}
+
 }
