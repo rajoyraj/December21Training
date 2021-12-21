@@ -1,0 +1,14 @@
+Title: Create account section accepts invalid email address and phone number.
+
+Description: When i enter an invalid email address and phone number more than 10 digits then input field accepts it.
+
+Steps to reproduce: Go to "Sign In" in the navigation bar then go to "Create Account" then put in email address and click on enter and then in the form put invalid phone number."
+and put values in old password,new password,confirm password input field. 
+
+Environment: Google Chrome
+
+Expected results: You can not invalid email address.
+
+Assigned to: Rajoy Chowdhury
+
+Severity: High.

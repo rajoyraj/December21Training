@@ -1,0 +1,14 @@
+Title: Email Address Field in contact us section accepts invalid email address.
+
+Description: When i enter any invalid email address for example abc@abc.com, input field accepts it.
+
+Steps to reproduce: Go to "Contact Us" in the navigation bar, 
+type in a value in the "email address" input field.
+
+Environment: Google Chrome
+
+Expected results: Invalid email address.
+
+Assigned to: Rajoy Chowdhury
+
+Severity: Medium.
