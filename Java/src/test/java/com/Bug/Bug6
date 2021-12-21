@@ -1,0 +1,13 @@
+Title: Cart empties on logging out.
+
+Description: When i log out with products added on cart and log back in the cart is empty.
+
+Steps to reproduce: Go to homepage and login then add any product into the cart and log out and log back in.
+
+Environment: Google Chrome
+
+Expected results: Carts should display numbers of product added into it.
+
+Assigned to: Rajoy Chowdhury
+
+Severity: low.
