@@ -1,0 +1,31 @@
+Test Plan:
+
+Test Product
+-Testing needs to be done on an e-commerce website that sells women clothes and accessories namely automationpractice.com
+
+Testing strategy
+*Create tests for the software and the hardware we use to test it on.
+-Use agile testing type
+-The risks for users is transaction failures.
+-Testers will have the required skills to browse the web page and test all functionality.
+
+Testing objectives
+*Check functionality of the page in all aspects to ensure the user can browse and use the services provided by the web page.
+*UI testing to ensure the page is responsive and all the pages are available to the user.
+*Performance testing to ensure the page does not crash for heavy traffic.
+
+Testing criterion
+-To ensure the page works fine to prevent any errors with the user using the product.
+
+Test environment 
+*OS- Win10
+*Browser:Google Chrome 
+*Version 96.0.4664.110 
+
+Test Schedule
+*Work on test tasks in an efficient smaller tasks to complete the test plan.
+
+Test deliverables
+*test plan
+*test data
+*test results
