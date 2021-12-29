@@ -1,0 +1,14 @@
+Title: Phone number field in update section accepts any digit phone number.
+
+Description: When i enter any digit more than 10 in input field then input field accepts it.
+
+Steps to reproduce: Go to "My Account" in the navigation bar then go to "My Addresses" then click on "Update"
+and put values in home phone input field. 
+
+Environment: Google Chrome
+
+Expected results: A phone number must be 10 digit numeric value.
+
+Assigned to: Rajoy Chowdhury
+
+Severity: High.

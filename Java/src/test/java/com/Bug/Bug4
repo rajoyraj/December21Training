@@ -1,0 +1,13 @@
+Title: Your Location field does not detect any address.
+
+Description: When i enter zip code input field and click on search it says address not found.
+
+Steps to reproduce: In the footer section under information section go to "Our Store" then below the map go to "Your Location" then input zip code click on "Search". 
+
+Environment: Google Chrome
+
+Expected results: A corresponding address should be returned .
+
+Assigned to: Rajoy Chowdhury
+
+Severity: High.

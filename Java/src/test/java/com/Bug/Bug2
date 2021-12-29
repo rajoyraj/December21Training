@@ -1,0 +1,14 @@
+Title: Password field in update section accepts old password.
+
+Description: When i enter old password in the update password then input field accepts it.
+
+Steps to reproduce: Go to "My Account" in the navigation bar then go to "My Addresses" then click on "Update"
+and put values in old password,new password,confirm password input field. 
+
+Environment: Google Chrome
+
+Expected results: You can not use your old password as your new password.
+
+Assigned to: Rajoy Chowdhury
+
+Severity: Medium.
