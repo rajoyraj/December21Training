@@ -17,7 +17,7 @@ public class SeleniumTest {
 	private final String url = "https://www.selenium.dev/";;
 
 	@Test
-	public void canLaunchWebDriver() {
+	public void canValidateUrl() {
 		String currenturl = driver.getCurrentUrl();
 		Assert.assertEquals(url, currenturl);
 	}
