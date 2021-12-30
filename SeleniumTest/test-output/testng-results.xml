@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-28T21:27:21 EST" name="Default suite" finished-at="2021-12-28T21:27:30 EST" duration-ms="8532">
+  <suite started-at="2021-12-29T21:09:58 EST" name="Default suite" finished-at="2021-12-29T21:10:06 EST" duration-ms="8499">
     <groups>
     </groups>
-    <test started-at="2021-12-28T21:27:21 EST" name="Default test" finished-at="2021-12-28T21:27:30 EST" duration-ms="8532">
+    <test started-at="2021-12-29T21:09:58 EST" name="Default test" finished-at="2021-12-29T21:10:06 EST" duration-ms="8499">
       <class name="com.Selenium.SeleniumTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-28T21:27:21 EST" name="setup" finished-at="2021-12-28T21:27:25 EST" duration-ms="4241" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-29T21:09:58 EST" name="setup" finished-at="2021-12-29T21:10:03 EST" duration-ms="4532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="canClickButton()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-28T21:27:25 EST" name="canClickButton" finished-at="2021-12-28T21:27:26 EST" duration-ms="919" status="PASS">
+        <test-method signature="canClickButton()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-29T21:10:03 EST" name="canClickButton" finished-at="2021-12-29T21:10:03 EST" duration-ms="863" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- canClickButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-28T21:27:26 EST" name="tearDown" finished-at="2021-12-28T21:27:26 EST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-29T21:10:03 EST" name="tearDown" finished-at="2021-12-29T21:10:03 EST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-28T21:27:26 EST" name="setup" finished-at="2021-12-28T21:27:29 EST" duration-ms="2986" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-29T21:10:03 EST" name="setup" finished-at="2021-12-29T21:10:06 EST" duration-ms="2738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="canLaunchWebDriver()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-28T21:27:29 EST" name="canLaunchWebDriver" finished-at="2021-12-28T21:27:29 EST" duration-ms="16" status="PASS">
+        <test-method signature="canValidateUrl()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-29T21:10:06 EST" name="canValidateUrl" finished-at="2021-12-29T21:10:06 EST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- canLaunchWebDriver -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-28T21:27:29 EST" name="tearDown" finished-at="2021-12-28T21:27:30 EST" duration-ms="296" status="PASS">
+        </test-method> <!-- canValidateUrl -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Selenium.SeleniumTest@1eb5174b]" started-at="2021-12-29T21:10:06 EST" name="tearDown" finished-at="2021-12-29T21:10:06 EST" duration-ms="261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

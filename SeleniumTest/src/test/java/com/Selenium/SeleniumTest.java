@@ -31,7 +31,21 @@ public class SeleniumTest {
 
 	@BeforeMethod
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
+
+		String os = System.getProperty("os.name").toLowerCase();
+
+		if (os.contains("mac")) {
+
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\Drivers\\chromedriver");
+
+		}
+		
+		else {
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
+		}
+
 		// System.setProperty("webdriver.gecko.driver",
 		// System.getProperty("user.dir")+"\\Drivers\\geckodriver.exe");
 		// System.setProperty("webdriver.edge.driver",
