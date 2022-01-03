@@ -1,17 +1,20 @@
 package Framework;
 
-public class PoJoClass {
+public class Bass {
 
 	private String make;
 	private String model;
 	private int stringCount;
 
-	public PoJoClass(String make, String model, int stringCount) {
+	public void setMake(String make) {
 		this.make = make;
-		this.model = model;
-		this.stringCount = stringCount;
 	}
-
+	public void setModel(String model) {
+		this.model=model;
+	}
+	public void setStringCount(int stringCount) {
+		this.stringCount=stringCount;
+	}
 	public String getMake() {
 		return make;
 	}

@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Selenium.SeleniumTest">
+      <class name="com.XpathCss.XpathandCss">
         <methods>
-          <include name="canValidateUrl"/>
-          <include name="canClickButton"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="canFindXpath"/>
         </methods>
-      </class> <!-- com.Selenium.SeleniumTest -->
+      </class> <!-- com.XpathCss.XpathandCss -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
