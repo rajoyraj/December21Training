@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Selenium.SeleniumTest">
+      <class name="com.SliderTests.SliderTests">
         <methods>
-          <include name="canValidateUrl"/>
-          <include name="canClickButton"/>
-          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="canTestSlider"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Selenium.SeleniumTest -->
+      </class> <!-- com.SliderTests.SliderTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
