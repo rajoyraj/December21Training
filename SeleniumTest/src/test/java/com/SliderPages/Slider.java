@@ -14,10 +14,8 @@ public class Slider extends PageObjectBase {
 
 	private final String URL = "https://demoqa.com/slider";
 
-	@FindBy(how = How.ID, using = "sliderValue")
+	@FindBy(how = How.CSS, using = "input.range-slider.range-slider--primary")
 	private WebElement sliderValue;
-
-	
 
 	public Slider(WebDriver driver) {
 		super(driver);
@@ -28,15 +26,15 @@ public class Slider extends PageObjectBase {
 		return this;
 	}
 
-	public void setValue(String val) {
+	public void setValue(String attValue) {
 
-		new SliderCtrlExtn(sliderValue,this.driver).setAttribute(val);
+		new SliderCtrlExtn(sliderValue, this.driver).setAttribute(attValue);
 
 	}
 
 	public String getValue() {
 
-		return new SliderCtrlExtn(sliderValue,this.driver).getAttribute();
+		return new SliderCtrlExtn(sliderValue, this.driver).getAttribute();
 
 	}
 

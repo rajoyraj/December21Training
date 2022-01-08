@@ -33,7 +33,7 @@ public class SliderTests extends TestBase {
 	@AfterMethod
 	public void tearDown() {
 
-		// super.cleanup();
+		super.cleanup();
 	}
 
 }
