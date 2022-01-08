@@ -18,8 +18,7 @@ public class SliderCtrlExtn {
 
 	public void setAttribute(String attValue) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", this.mappedelement, "value",
-				attValue);
+		js.executeScript("arguments[0].value=arguments[1];", this.mappedelement, attValue);
 	}
 
 	public String getAttribute() {

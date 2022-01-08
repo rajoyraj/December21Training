@@ -17,10 +17,13 @@ public class SliderTests extends TestBase {
 		Slider sl = new Slider(this.getDriver()).navigate();
 		sl.setValue("80");
 		System.out.println(sl.getValue());
+
 		sl.setValue("17");
 		System.out.println(sl.getValue());
+
 		sl.setValue("0");
 		System.out.println(sl.getValue());
+
 		sl.setValue("100");
 		System.out.println(sl.getValue());
 	}
