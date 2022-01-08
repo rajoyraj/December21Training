@@ -34,10 +34,10 @@ public class OldStyleSelectMenu extends PageObjectBase {
 		new OldStyleSelectCtrlExtn(oldStyleSelectMenu).setValue(text);
 		return this;
 	}
-	
-	public void getAlloptions() {
-		
-		new OldStyleSelectCtrlExtn(oldStyleSelectMenu).getOptions();
+
+	public String getAlloptions() {
+
+		return new OldStyleSelectCtrlExtn(oldStyleSelectMenu).getOptions();
 	}
 
 }

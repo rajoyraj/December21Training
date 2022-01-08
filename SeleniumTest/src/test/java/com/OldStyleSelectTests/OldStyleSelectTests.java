@@ -15,9 +15,9 @@ public class OldStyleSelectTests extends TestBase {
 
 		OldStyleSelectMenu old = new OldStyleSelectMenu(this.getDriver()).navigate();
 		old.select("Blue");
-		Thread.sleep(5000);
-		System.out.println(old.getSelected("Purple"));
-		old.getAlloptions();
+
+		System.out.println(old.getSelected("Purple") + " " + "is selected");
+		System.out.println(old.getAlloptions());
 	}
 
 	@BeforeMethod
