@@ -29,7 +29,7 @@ public class OldStyleSelectCtrlExtn {
 		return oldSelect.getFirstSelectedOption().getText();
 	}
 
-	public String getOptions() {
+	public String[] getOptions() {
 		Select oldSelect = new Select(mappedelement);
 
 		List<WebElement> options = new ArrayList<WebElement>();
@@ -41,6 +41,14 @@ public class OldStyleSelectCtrlExtn {
 
 			optn.add(element.getText());
 		}
-		return optn.toString();
+
+		String[] arr = new String[optn.size()];
+
+		for (int i = 0; i < optn.size(); i++) {
+
+			arr[i] = optn.get(i);
+		}
+
+		return arr;
 	}
 }

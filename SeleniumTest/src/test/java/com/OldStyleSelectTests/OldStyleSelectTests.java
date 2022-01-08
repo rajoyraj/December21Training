@@ -14,10 +14,15 @@ public class OldStyleSelectTests extends TestBase {
 	public void canTestOldStyleSelectMenu() throws InterruptedException {
 
 		OldStyleSelectMenu old = new OldStyleSelectMenu(this.getDriver()).navigate();
-		old.select("Blue");
+		old.setValue("Blue");
 
-		System.out.println(old.getSelected("Purple") + " " + "is selected");
-		System.out.println(old.getAlloptions());
+		System.out.println(old.getValue("Purple") + " " + "is selected");
+		String[] optns = old.getOptions();
+
+		for (String op : optns) {
+
+			System.out.println(op);
+		}
 	}
 
 	@BeforeMethod

@@ -24,18 +24,18 @@ public class OldStyleSelectMenu extends PageObjectBase {
 		return this;
 	}
 
-	public String getSelected(String text) {
+	public String getValue(String text) {
 
 		return new OldStyleSelectCtrlExtn(oldStyleSelectMenu).getValue(text);
 	}
 
-	public OldStyleSelectMenu select(String text) {
+	public OldStyleSelectMenu setValue(String text) {
 
 		new OldStyleSelectCtrlExtn(oldStyleSelectMenu).setValue(text);
 		return this;
 	}
 
-	public String getAlloptions() {
+	public String[] getOptions() {
 
 		return new OldStyleSelectCtrlExtn(oldStyleSelectMenu).getOptions();
 	}
