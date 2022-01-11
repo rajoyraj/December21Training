@@ -8,21 +8,19 @@ import org.openqa.selenium.support.ui.Select;
 
 public class OldStyleSelectCtrlExtn {
 
-	private WebElement mappedelement;
+	private Select oldSelect;
 
 	public OldStyleSelectCtrlExtn(WebElement mappedelement) {
 
-		this.mappedelement = mappedelement;
+		this.oldSelect = new Select(mappedelement);
 	}
 
 	public void setValue(String text) {
-		Select oldSelect = new Select(mappedelement);
 
 		oldSelect.selectByVisibleText(text);
 	}
 
 	public String getValue(String text) {
-		Select oldSelect = new Select(mappedelement);
 
 		oldSelect.selectByVisibleText(text);
 
@@ -30,7 +28,6 @@ public class OldStyleSelectCtrlExtn {
 	}
 
 	public String[] getOptions() {
-		Select oldSelect = new Select(mappedelement);
 
 		List<WebElement> options = new ArrayList<WebElement>();
 		options = oldSelect.getOptions();
