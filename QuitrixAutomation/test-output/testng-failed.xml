@@ -5,7 +5,7 @@
     <classes>
       <class name="com.QuitrixAutomation.JavaIO">
         <methods>
-          <include name="canGetBrowserType"/>
+          <include name="canHydrateObject"/>
         </methods>
       </class> <!-- com.QuitrixAutomation.JavaIO -->
     </classes>
