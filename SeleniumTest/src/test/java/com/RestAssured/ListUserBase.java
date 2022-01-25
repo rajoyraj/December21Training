@@ -2,20 +2,15 @@ package com.RestAssured;
 
 import java.util.ArrayList;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class ListUserBase {
 	public int page;
 
-	@JsonProperty("per_page")
-	public int perPage;
+	public int per_page;
 
 	public int total;
 
-	@JsonProperty("total_pages")
-	public int totalPages;
-   
-	@JsonProperty("data")
+	public int total_pages;
+
 	public ArrayList<SingleUserData> data;
 	private Support support;
 
@@ -28,11 +23,11 @@ public class ListUserBase {
 	}
 
 	public int getPerPage() {
-		return perPage;
+		return per_page;
 	}
 
 	public void setPerPage(int perPage) {
-		this.perPage = perPage;
+		this.per_page = perPage;
 	}
 
 	public int getTotal() {
@@ -44,11 +39,11 @@ public class ListUserBase {
 	}
 
 	public int getTotalPages() {
-		return totalPages;
+		return total_pages;
 	}
 
 	public void setTotalPages(int totalPages) {
-		this.totalPages = totalPages;
+		this.total_pages = totalPages;
 	}
 
 	public ArrayList<SingleUserData> getData() {
