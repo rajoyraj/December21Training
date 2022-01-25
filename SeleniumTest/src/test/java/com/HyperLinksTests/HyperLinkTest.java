@@ -3,9 +3,12 @@ package com.HyperLinksTests;
 import org.testng.annotations.Test;
 
 import com.HyperLinkPages.HyperLink;
-import framework.TestBase;
+import com.DriverManager.TestBase;
 
 import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 
 public class HyperLinkTest extends TestBase {
@@ -19,7 +22,7 @@ public class HyperLinkTest extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
 		super.setup();
 	}
 
