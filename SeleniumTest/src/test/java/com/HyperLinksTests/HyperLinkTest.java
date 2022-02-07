@@ -16,8 +16,7 @@ public class HyperLinkTest extends TestBase {
 	@Test
 	public void canTestHyperLinks() {
 
-		HyperLink hl = new HyperLink(this.getDriver()).navigate();
-		hl.click("badrequest");
+		new HyperLink(this.getDriver()).navigate().click("badrequest");
 
 	}
 
