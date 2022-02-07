@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Department" parallel="tests" thread-count="6">
-
-	<test name="Personal loan" parallel="classes" thread-count="1">
-
+	<test name="Personal loan">
 		<classes>
-
 			<class name="com.TestNG.Test5" />
-
 		</classes>
 	</test>
-
 </suite> 

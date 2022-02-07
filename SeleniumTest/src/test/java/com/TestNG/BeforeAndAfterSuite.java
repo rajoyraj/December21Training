@@ -33,7 +33,7 @@ public class BeforeAndAfterSuite {
 
 	@AfterSuite
 	public void afterSuite() {
-		System.out.println("I am the no 1 from last ");
+		System.out.println("I am the no 1 from last");
 	}
 
 	@Test

@@ -7,26 +7,26 @@ public class Test5 {
 	@Test
 	public void WebloginCarLoan() {
 
-		System.out.println("weblogincar");
+		System.out.println("weblogincar" + "  " + Thread.currentThread().getId());
 
 	}
 
 	@Test
 	public void MobileLogincarLoan() {
 
-		System.out.println("Mobilelogincar");
+		System.out.println("Mobilelogincar" + "  " + Thread.currentThread().getId());
 	}
 
 	@Test
 	public void MobilesignimcarLoan() {
 
-		System.out.println("Mobile SIGIN");
+		System.out.println("Mobile SIGIN" + "  " + Thread.currentThread().getId());
 	}
 
 	@Test
 	public void APIcarLoan() {
 
-		System.out.println("APIlogincar");
+		System.out.println("APIlogincar" + "  " + Thread.currentThread().getId());
 	}
 
 }
