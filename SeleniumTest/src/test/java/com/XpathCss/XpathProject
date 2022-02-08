@@ -1,0 +1,7 @@
+1.driver.findElement(By.xpath("//input[@id='userName']");
+driver.findElements(By.xpath("//button"));
+driver.findElement(By.xpath("//div[text()='Vega']"));
+driver.findElement(By.xpath("//input[@id='impressiveRadio']/parent::div");
+driver.findElement(By.xpath("//input[@id='impressiveRadio']/ancestor::div"));
+driver.findElement(By.xpath("//input[@id='impressiveRadio']/parent::div/label"));
+driver.findElement(By.xpath("//button[contains(text(),'Click')]");
