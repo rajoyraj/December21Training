@@ -3,13 +3,14 @@ package NestedIframesTests;
 import org.testng.annotations.Test;
 
 import NestedIframesPages.NestedIframes;
-import framework.TestBase;
-
 import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class NestedIframestest extends TestBase {
+public class NestedIframestest extends com.DriverManager.TestBase {
   @Test
   public void canTestNestedIframes() {
 	  
@@ -25,7 +26,7 @@ public class NestedIframestest extends TestBase {
 	  
   }
   @BeforeMethod
-  public void setUp() {
+  public void setUp() throws IOException {
 	  super.setup();
   }
 

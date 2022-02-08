@@ -3,12 +3,13 @@ package com.radioButtonTests;
 import org.testng.annotations.Test;
 
 import com.RadioButtonPages.RadioButton;
-import framework.TestBase;
-
 import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 
-public class RadioButtonTests extends TestBase {
+public class RadioButtonTests extends com.DriverManager.TestBase {
 
 	@Test
 	public void canTestRadioButton() {
@@ -21,7 +22,7 @@ public class RadioButtonTests extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
 		super.setup();
 	}
 
