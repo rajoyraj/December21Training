@@ -1,90 +1,91 @@
 package com.QuitrixAutomation;
 
-import static org.testng.Assert.assertTrue;
-
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
 
-import Framework.PoJoClass;
-import Framework.configurationProvider;
+import Framework.Bass;
 
 public class JavaIO {
-	@Test
-	public void canGetBrowserType() {
-		configurationProvider provider = new configurationProvider();
-		try {
-			HashMap<String, String> properties = provider.getPropertiesFromResourceFile("config.properties");
-			if (properties.containsKey("BrowserType")) {
-				System.out.println(properties.get("BrowserType"));
-			}
 
-			Assert.assertEquals(properties.get("BrowserType"), "chrome");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	private CSVReader csvReaderBuilder() throws FileNotFoundException {
+		File file = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\basses.csv");
+		FileReader filereader = new FileReader(file);
+		return new CSVReaderBuilder(filereader).withSkipLines(1).build();
+
 	}
 
 	@Test
-	public void canGetMakesAndModels() {
+	public void readCsvIntoHashmap() {
 		try {
-			HashMap<String, ArrayList<String>> basses = new HashMap<String, ArrayList<String>>();
-			CSVReader bassesFile = new CSVReader(new FileReader(getClass().getResource("basses.csv").getPath()));
-			bassesFile.skip(1);
-			String[] row = null;
-			ArrayList<String> models = new ArrayList<String>();
+			CSVReader reader = csvReaderBuilder();
+			String[] nextline;
+			HashMap<String, String> makeandmodels = new HashMap<String, String>();
 
-			while ((row = bassesFile.readNext()) != null) {
-				if (!basses.containsKey(row[0])) {
-					basses.put(row[0], new ArrayList<String>());
+			try {
+				while ((nextline = reader.readNext()) != null) {
+
+					String make = nextline[0];
+					String model = nextline[1];
+
+					makeandmodels.put(make, model);
+
+					/*
+					 * for (String cell : nextline) { System.out.print(cell + "\t"); }
+					 * System.out.println();
+					 */
+
 				}
-				basses.get(row[0]).add(row[1]);
+			} catch (CsvValidationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
-			for (String i : basses.keySet()) {
-				System.out.println("Make: " + i + " Models: " + basses.get(i));
-			}
-
-			assertTrue(basses.get("Warwick") != null);
-			assertTrue(basses.containsKey("Fender"));
-		} catch (CsvValidationException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+
 	}
 
 	@Test
-	public void canGetBasseObject() {
+	public void canHydrateFromCsv() throws FileNotFoundException {
+		// List<Bass> basses = new ArrayList<Bass>();
 		try {
-			CSVReader bassesFile = new CSVReader(new FileReader(getClass().getResource("basses.csv").getPath()));
-			bassesFile.skip(1);
-			String[] row = null;
-			ArrayList<PoJoClass> basses = new ArrayList<PoJoClass>();
+			CSVReader reader = csvReaderBuilder();
+			String[] records;
 
-			while ((row = bassesFile.readNext()) != null) {
-				basses.add(new PoJoClass(row[0], row[1], Integer.parseInt(row[2])));
+			try {
+				while ((records = reader.readNext()) != null) {
+
+					String make = records[0];
+					String model = records[1];
+					int stringCount = Integer.parseInt(records[2]);
+					Bass bass = new Bass();
+					bass.setMake(make);
+					bass.setModel(model);
+					bass.setStringCount(stringCount);
+					System.out.println(bass.getMake() + "\t" + bass.getModel() + "\t" + bass.getStringCount());
+					// basses.add(bass);
+					// System.out.println(basses.get(0).getModel());
+
+				}
+			} catch (Exception ex) {
+				throw new RuntimeException(ex.getMessage());
+			} finally {
+
 			}
+		} finally {
 
-			for (PoJoClass b : basses) {
-				System.out.println("Make: " + b.getMake());
-				System.out.println("Model: " + b.getModel());
-				System.out.println("String Count: " + b.getStringCount());
-				System.out.println();
-			}
-
-			assertTrue(basses.getClass() != null);
-		} catch (CsvValidationException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 }

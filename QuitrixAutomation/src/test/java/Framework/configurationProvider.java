@@ -13,6 +13,8 @@ public class configurationProvider {
 
 		try {
 			inputStream = getClass().getClassLoader().getResourceAsStream(fileName);
+			
+			System.out.println(getClass().getClassLoader().getResourceAsStream(fileName));
 
 			if(inputStream == null) {
 				throw new RuntimeException(fileName + " was not found in the Resources folder.");
