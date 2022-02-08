@@ -1,6 +1,6 @@
 package quintrix.Assignment;
 
-public class Car {
+public class Car extends Vehicle {
 
 	String model;
 	private int odometer = 7000;
@@ -21,5 +21,11 @@ public class Car {
 	public void start() {
 
 		System.out.println("I have just started my car engine");
+	}
+
+	public void drive() {
+
+		this.odometer++;
+
 	}
 }
