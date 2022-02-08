@@ -1,0 +1,11 @@
+driver.findElement(By.cssSelector("input[id='userName']"));
+driver.findElements(By.cssSelector("button[class='btn btn-primary']"));
+driver.findElement(By.cssSelector("footer>span"));
+driver.findElements(By.cssSelector("ul#nav>li>a"));
+driver.findElement(By.cssSelector("select[id='oldSelectMenu']>option[value='4']"));
+document.querySelector('#sliderValue').getAttribute('value');
+document.querySelector('#userName').setAttribute('value',"MichaelPhelps");
+
+
+
+

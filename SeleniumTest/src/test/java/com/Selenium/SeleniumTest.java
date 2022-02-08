@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class SeleniumTest {
 
 	private WebDriver driver;
-	private final String url = "https://www.selenium.dev/";;
+	private final String url = "https://www.selenium.dev/";
 
 	@Test
 	public void canValidateUrl() {
@@ -26,7 +26,7 @@ public class SeleniumTest {
 	public void canClickButton() {
 		WebElement element = driver.findElement(By.cssSelector("a[href='/documentation/webdriver/']"));
 		element.click();
-		driver.quit();
+
 	}
 
 	@BeforeMethod
@@ -36,11 +36,10 @@ public class SeleniumTest {
 
 		if (os.contains("mac")) {
 
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\Drivers\\chromedriver");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver");
 
 		}
-		
+
 		else {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
@@ -54,6 +53,7 @@ public class SeleniumTest {
 		this.driver = new ChromeDriver();
 		this.driver.manage().window().maximize();
 		this.driver.navigate().to(url);
+
 	}
 
 	@AfterMethod

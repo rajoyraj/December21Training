@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-27T18:10:28 EST" name="Default suite" finished-at="2021-12-27T18:10:28 EST" duration-ms="180">
+  <suite started-at="2021-12-31T23:40:44 EST" name="Default suite" finished-at="2021-12-31T23:40:44 EST" duration-ms="116">
     <groups>
     </groups>
-    <test started-at="2021-12-27T18:10:28 EST" name="Default test" finished-at="2021-12-27T18:10:28 EST" duration-ms="180">
+    <test started-at="2021-12-31T23:40:44 EST" name="Default test" finished-at="2021-12-31T23:40:44 EST" duration-ms="116">
       <class name="com.QuitrixAutomation.JavaIO">
-        <test-method signature="canReadCsvFile()[pri:0, instance:com.QuitrixAutomation.JavaIO@13b13b5d]" started-at="2021-12-27T18:10:28 EST" name="canReadCsvFile" finished-at="2021-12-27T18:10:28 EST" duration-ms="87" status="PASS">
+        <test-method signature="canHydrateObject()[pri:0, instance:com.QuitrixAutomation.JavaIO@482bce4f]" started-at="2021-12-31T23:40:44 EST" name="canHydrateObject" finished-at="2021-12-31T23:40:44 EST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- canReadCsvFile -->
+        </test-method> <!-- canHydrateObject -->
       </class> <!-- com.QuitrixAutomation.JavaIO -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
