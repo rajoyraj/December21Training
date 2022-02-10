@@ -141,9 +141,8 @@ public class JDBCTests {
 		preparedStatement.setInt(1, 0);
 		preparedStatement.execute();
 
-		String callProcedure = "CALL film_in_stock(@filmId, ?, @filmCount)";
+		String callProcedure = "CALL film_in_stock(@filmId, 2, @filmCount)";
 		preparedStatement = con.prepareStatement(callProcedure);
-		preparedStatement.setInt(1, 2);
 		rs = preparedStatement.executeQuery();
 
 		while (rs.next()) {
