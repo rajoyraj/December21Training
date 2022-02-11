@@ -131,7 +131,7 @@ public class JDBCTests {
 
 	@Test
 	public void getFourInventoryIdsUsingStoredProcedure() throws SQLException {
-		int noOfIds = 0;
+		int noOfCurrentIds = 0;
 		String filmId = "SET @filmId = (SELECT f.film_id FROM film AS f WHERE f.title = ?)";
 		callablestmt = con.prepareCall(filmId);
 		callablestmt.setString(1, "Alien Center");
@@ -142,15 +142,9 @@ public class JDBCTests {
 		callablestmt.setInt(1, 2);
 		callablestmt.registerOutParameter(2, Types.INTEGER);
 		rs = callablestmt.executeQuery();
+		noOfCurrentIds = callablestmt.getInt(2);
 
-		while (rs.next()) {
-
-			System.out.println(rs.getInt(1));
-			noOfIds++;
-
-		}
-
-		Assert.assertEquals(noOfIds, 4);
+		Assert.assertEquals(noOfCurrentIds, 4);
 	}
 
 	@Test
