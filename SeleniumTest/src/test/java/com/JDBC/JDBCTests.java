@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -38,7 +39,7 @@ public class JDBCTests {
 
 		while (rs.next()) {
 
-			System.out.println(rs.getString("s"));
+			System.out.println(rs.getString("city"));
 			count++;
 		}
 
@@ -132,18 +133,15 @@ public class JDBCTests {
 	public void getFourInventoryIdsUsingStoredProcedure() throws SQLException {
 		int noOfIds = 0;
 		String filmId = "SET @filmId = (SELECT f.film_id FROM film AS f WHERE f.title = ?)";
-		preparedStatement = con.prepareStatement(filmId);
-		preparedStatement.setString(1, "Alien Center");
-		preparedStatement.execute();
+		callablestmt = con.prepareCall(filmId);
+		callablestmt.setString(1, "Alien Center");
+		callablestmt.execute();
 
-		String filmCount = " SET @filmCount = ? ";
-		preparedStatement = con.prepareStatement(filmCount);
-		preparedStatement.setInt(1, 0);
-		preparedStatement.execute();
-
-		String callProcedure = "CALL film_in_stock(@filmId, 2, @filmCount)";
-		preparedStatement = con.prepareStatement(callProcedure);
-		rs = preparedStatement.executeQuery();
+		String callProcedure = "CALL film_in_stock(@filmId, ?, ?)";
+		callablestmt = con.prepareCall(callProcedure);
+		callablestmt.setInt(1, 2);
+		callablestmt.registerOutParameter(2, Types.INTEGER);
+		rs = callablestmt.executeQuery();
 
 		while (rs.next()) {
 
