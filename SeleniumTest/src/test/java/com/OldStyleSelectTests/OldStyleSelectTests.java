@@ -3,12 +3,13 @@ package com.OldStyleSelectTests;
 import org.testng.annotations.Test;
 
 import com.OldStyleSelectPages.OldStyleSelectMenu;
-import framework.TestBase;
-
 import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 
-public class OldStyleSelectTests extends TestBase {
+public class OldStyleSelectTests extends com.DriverManager.TestBase {
 
 	@Test
 	public void canTestOldStyleSelectMenu() throws InterruptedException {
@@ -26,7 +27,7 @@ public class OldStyleSelectTests extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
 		super.setup();
 	}
 

@@ -4,12 +4,13 @@ import org.testng.annotations.Test;
 
 import com.SliderPages.Slider;
 
-import framework.TestBase;
-
 import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 
-public class SliderTests extends TestBase {
+public class SliderTests extends com.DriverManager.TestBase {
 
 	@Test
 	public void canTestSlider() {
@@ -29,7 +30,7 @@ public class SliderTests extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
 		super.setup();
 	}
 
